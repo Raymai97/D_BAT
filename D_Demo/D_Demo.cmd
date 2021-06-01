@@ -1,5 +1,6 @@
 @echo off
 setlocal enableDelayedExpansion
+color 0f
 call :menuInit 10 Apple Ball Croc Dagger Egg Fish Girl Hospital "Ice Cream" Jellyfish
 cls
 echo.
@@ -43,6 +44,7 @@ set a=0
 set "menuItemSel%iMenuSel%=>"
 :_menuDisp__
 set /a a=a+1
+if "%a%"=="%iMenuSel%" ( DColor f0 ) else ( DColor 0f )
 echo. !menuItemSel%a%! !menuItem%a%!
 if not "%a%"=="%nMenuItem%" goto _menuDisp__
 exit/b
