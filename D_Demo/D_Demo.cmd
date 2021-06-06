@@ -44,8 +44,9 @@ set a=0
 set "menuItemSel%iMenuSel%=>"
 :_menuDisp__
 set /a a=a+1
-if "%a%"=="%iMenuSel%" ( DColor f0 ) else ( DColor 0f )
+if "%a%"=="%iMenuSel%" ( DColor f0 )
 echo. !menuItemSel%a%! !menuItem%a%!
+DColor 0f
 if not "%a%"=="%nMenuItem%" goto _menuDisp__
 exit/b
 
